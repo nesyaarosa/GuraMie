@@ -43,7 +43,7 @@ $pdf->Cell(25,6,'',0,0,'C');
     $pdf->Cell(15,7,'',0,1);
 	$pdf->Cell(15,7,'',0,1);
 	$pdf->SetFont('Arial','B',12);
-	$pdf->Cell(325,10,'Pekanbaru, 3 Agustus 2018',0,1,'C');
+	$pdf->Cell(325,10,'Pekanbaru, 6 Agustus 2018',0,1,'C');
 	$pdf->Cell(15,7,'',0,1);
 	$pdf->SetFont('Arial','B',12);
 	$pdf->Cell(325,10,'CEO GuraMie',0,1,'C');
