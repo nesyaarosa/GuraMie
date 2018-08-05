@@ -14,7 +14,7 @@ $table['cols'] = array(
 );
  
 //melakukan query ke database select yaitu table kelas
-$sql = $conn->query("SELECT * FROM pejualan");
+$sql = $conn->query("SELECT * FROM penjualan");
 //perulangan untuk menampilkan data dari database
 while($data = $sql->fetch_assoc()){
 	//membuat array
@@ -95,11 +95,8 @@ $jsonTable3 = json_encode($table);*/
 	//memanggil file json untuk charts dari gstatic
 	//pemanggilan function
 	google.charts.load('current', {'packages':['corechart']});
-	google.charts.setOnLoadCallback(drawChart);
-	//google.charts.setOnLoadCallback(drawChart2);
-	//google.charts.setOnLoadCallback(drawChart3);
-	
-	function drawChart() {
+	//google.charts.setOnLoadCallback(drawChart);
+	/*function drawChart() {
  
 		// membuat data chart dari json yang sudah ada di panggil
 		var data = new google.visualization.DataTable(<?php echo $jsonTable; ?>);
@@ -128,7 +125,7 @@ $jsonTable3 = json_encode($table);*/
 		//untuk pemanggilan chart saat proses output
 		var chart = new google.visualization.LineChart(document.getElementById('chart_div2'));
 		chart.draw(data, options);
-	}
+	}*/
 	
 	function drawChart3() {
  
@@ -137,7 +134,7 @@ $jsonTable3 = json_encode($table);*/
 		var data = new google.visualization.DataTable(<?php echo $jsonTable3; ?>);
  
 		// Set options, mengubah judul dan ukuran
-		var options = {'title':'Data Pembelian',
+		var options = {'title':'Data Penjualan',
 					   'width':500,
 					   'height':400};
  
@@ -145,16 +142,16 @@ $jsonTable3 = json_encode($table);*/
 		//untuk pemanggilan chart saat proses output
 		var chart = new google.visualization.AreaChart(document.getElementById('chart_div3'));
 		chart.draw(data, options);
-	}*/
+	}
     </script>
 </head>
 <body>
     
 	<!--Div yang akan menampilkan chart, sesuaikan dengan nama yg sudah
 	diinisialkan pada bagian document.getElementById setiap function-->
-    <div id="chart_div"></div>
-	<!--<div id="chart_div2"></div>
-	<div id="chart_div3"></div>-->
+    <!--<div id="chart_div"></div>
+	<div id="chart_div2"></div>-->
+	<div id="chart_div3"></div>
 	
 </body>
 </html>
